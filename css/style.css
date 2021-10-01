@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*  El heigth del html y el min-height del body sirven para hacer
+    que la página ocupe todo el espacio hacia abajo */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 1.2rem;
+    background-color: green;    
+    min-height: 100%;
+    
+}
+
+
+
+.grid-container > * {
+   
+    box-shadow: -1px 1px 7px 0px black;
+    border-radius: 9px;
+    padding: 10px;   
+    text-align: center;
+}
+
+.header {
+    
+    background-color: indianred;
+    grid-area: header;
+    /*order: 1;*/
+}
+
+.navbar {
+    background-color: khaki;
+    grid-area: navbar;
+    /*order: 2;*/
+}
+
+.section {
+    background-color: lightblue;
+    grid-area: section;
+    /*order: 3;*/
+}
+
+.aside {
+    background-color: lightpink;
+    grid-area: aside;
+    /*order: 6;*/
+}
+
+.footer {
+    background-color: lightslategray;
+    grid-area: footer;
+    /*order: 5;*/
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+  
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 130px 50px auto 15%;
+    grid-template-areas: 
+        "header header" 
+        "navbar navbar" 
+        "section aside" 
+        "footer footer";
+}
+
